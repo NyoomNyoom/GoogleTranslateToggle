@@ -2,12 +2,20 @@
     "manifest_version": 3,
     "name": "Google Translate Toggle",
     "version": "1.0",
-    "description": "Redirects the current page through Google Translate.",
+    "description": "Keybind to turn Google translate on and off by feeding the whole webpage through Google translate.",
     "permissions": ["tabs"],
     "action": {
-        "default_title": "Translate this page",
+        "default_title": "Translate this page"
     },
     "background": {
         "service_worker": "background.js"
-  }
+    },
+    "commands": {
+        "toggle-translate": {
+            "suggested_key": {
+                "default": "Ctrl+Q"
+            },
+            "description": "Toggle Google translate"
+        }
+    }
 }
